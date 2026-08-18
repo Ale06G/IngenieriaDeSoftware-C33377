@@ -10,11 +10,15 @@
 
 body {
     font-family: "Roboto", sans-serif;
+    background-color: #e9ddcf;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 main {
-    background-color: var(--background-color);
-    padding: 80px 200px;
+    padding: 80px 0px;
+    width: 70%;
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -35,6 +39,7 @@ header {
     justify-content: center;
     padding: 50px;
     background-color: #633011;
+    width: 100%;
 }
 
 .title {
@@ -48,6 +53,19 @@ header {
     justify-content: center;
     align-items: center;
     gap: 90px;
+}
+
+@media screen and (max-width: 768px) {
+    .headline-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .headline {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .headline-section img {
@@ -75,6 +93,7 @@ header {
     border: none;
     border-radius: 8px;
     cursor: pointer;
+    width: fit-content;
 }
 
 .button:hover {
@@ -126,7 +145,7 @@ header {
     left: 0;
     height: 100vh;
     width: 100vw;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.5);
     display: none;
 }
 
@@ -134,9 +153,10 @@ header {
     position: absolute;
     background-color: #fff;
     padding: 50px;
-    width: 40%;
-    top: 5%;
-    bottom: 5%;
+    width: 70%;
+    height: 70%;
+    top: 0;
+    bottom: 0;
     left: 0;
     right: 0;
     margin: auto;
@@ -162,6 +182,34 @@ header {
     align-items: center;
 }
 
+.form-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.share-crochet-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 70%;
+}
+
+.share-crochet-form input, .share-crochet-form textarea {
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.share-crochet-form button {
+    display: block;
+    margin: 0 auto;
+}
+
 ul {
     padding-top: 20px;
     padding-left: 50px;
@@ -173,6 +221,7 @@ footer {
     display: flex;
     justify-content: space-between;
     padding: 20px;
+    width: 100%;
 }
 
 footer p {
