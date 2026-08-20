@@ -200,9 +200,11 @@ header {
     width: 70%;
 }
 
-.share-crochet-form input, .share-crochet-form textarea {
+.share-crochet-form input, .share-crochet-form textarea, .share-crochet-form select {
     padding: 10px;
     border-radius: 10px;
+    border: none;
+    background-color: #fff;
 }
 
 .share-crochet-form button {
