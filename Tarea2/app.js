@@ -7,6 +7,8 @@ const didYouKnowButton = document.querySelector("#did-you-know-button");
 const modalContainer = document.querySelector(".modal-container");
 const modalCloseButton = document.querySelector(".modal-close-button");
 
+const accordionItemHeaders = document.querySelectorAll(".accordion-item-header");
+
 let position = 0;
 
 sliderLeftButton.addEventListener("click", () => {
@@ -27,4 +29,17 @@ didYouKnowButton.addEventListener("click", () => {
 modalCloseButton.addEventListener("click", () => {
     modalContainer.style.display= "none";
     document.body.classList.remove("no-scroll")
+})
+
+accordionItemHeaders.forEach(accordionItemHeader => {
+    accordionItemHeader.addEventListener("click", event => {
+        accordionItemHeader.classList.toggle("active");
+        const accordionItemBody = accordionItemHeader.nextElementSibling;
+        if(accordionItemHeader.classList.contains("active")) {
+            accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + "px";
+        }
+        else {
+            accordionItemBody.style.maxHeight = 0;
+        }
+    })
 })
