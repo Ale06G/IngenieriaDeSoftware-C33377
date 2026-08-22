@@ -1,5 +1,7 @@
 :root {
-    --background-color: #e9ddcf;
+    --primary-color: #e9ddcf;
+    --secondary-color: #633011;
+    --accent-color: #d16503;
 }
 
 * {
@@ -10,7 +12,7 @@
 
 body {
     font-family: "Roboto", sans-serif;
-    background-color: #e9ddcf;
+    background-color: var(--primary-color);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -38,7 +40,7 @@ header {
     display: flex;
     justify-content: center;
     padding: 50px;
-    background-color: #633011;
+    background-color: var(--secondary-color);
     width: 100%;
 }
 
@@ -83,6 +85,44 @@ header {
     font-size: 35px;
     text-align: center;
     margin-bottom: 25px;
+}
+
+.show-hide-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.division-line {
+    height: 1px;
+    width: 35%;
+    background-color: var(--accent-color);
+}
+
+.main-line {
+    width: 100%;
+}
+
+#show-hide-button {
+    color: var(--accent-color);
+    text-align: center;
+    margin: 0;
+    cursor: pointer;
+}
+
+.additional-info {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    padding: 10px;
+}
+
+.additional-info.active {
+    display: block;
+    border: 1px solid var(--accent-color);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
 }
 
 .accordion {
@@ -139,7 +179,7 @@ header {
 }
 
 .button {
-    background-color: #d16503;
+    background-color: var(--accent-color);
     padding: 15px;
     color: #fff;
     font-weight: 700;
@@ -272,7 +312,7 @@ ul {
 }
 
 footer {
-    background-color: #633011;
+    background-color: var(--secondary-color);
     color: #e9ddcf;
     display: flex;
     justify-content: space-between;

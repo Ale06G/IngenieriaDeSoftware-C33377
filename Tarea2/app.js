@@ -9,6 +9,9 @@ const modalCloseButton = document.querySelector(".modal-close-button");
 
 const accordionItemHeaders = document.querySelectorAll(".accordion-item-header");
 
+const showHideButton = document.querySelector("#show-hide-button");
+const additionalInfo = document.querySelector(".additional-info");
+
 let position = 0;
 
 sliderLeftButton.addEventListener("click", () => {
@@ -42,4 +45,15 @@ accordionItemHeaders.forEach(accordionItemHeader => {
             accordionItemBody.style.maxHeight = 0;
         }
     })
+})
+
+showHideButton.addEventListener("click", () => {
+    additionalInfo.classList.toggle("active");
+    if(additionalInfo.classList.contains("active")) {
+        showHideButton.textContent = "Ocultar consejos para principiantes";
+        additionalInfo.style.maxHeight = additionalInfo.scrollHeight + "px";
+    } else {
+        showHideButton.textContent = "Mostrar consejos para principiantes";
+        additionalInfo.style.maxHeight = 0;
+    }
 })
